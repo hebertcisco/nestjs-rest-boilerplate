@@ -1,0 +1,56 @@
+import {
+    Module,
+    NestModule,
+    MiddlewareConsumer,
+    RequestMethod,
+    CacheModule,
+    CacheInterceptor,
+} from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { configService } from './infra/config/config.service';
+import { IntegrationModule } from './domain/integration/integration.module';
+import { RolesMiddleware } from './infra/auth/roles.middleware';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { ThrottlerModule } from '@nestjs/throttler';
+import { LoggerModule } from 'nestjs-pino-logger';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+
+@Module({
+    imports: [
+        ServeStaticModule.forRoot({
+            rootPath: join(__dirname, '..', 'public'),
+        }),
+        TypeOrmModule.forRoot(configService.getTypeOrmConfig()),
+        IntegrationModule,
+        CacheModule.register(),
+        LoggerModule.forRoot({
+            httpLoggerExclude: ['/', '/status'],
+        }),
+        ThrottlerModule.forRoot({
+            ttl: 60 * 60,
+            limit: 60,
+        }),
+    ],
+    controllers: [AppController],
+    providers: [
+        AppService,
+        {
+            provide: APP_INTERCEPTOR,
+            useClass: CacheInterceptor,
+        },
+    ],
+})
+export class AppModule implements NestModule {
+    configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(RolesMiddleware)
+            .exclude(
+                { path: 'status', method: RequestMethod.GET },
+                { path: '/', method: RequestMethod.GET },
+            )
+            .forRoutes('*');
+    }
+}
