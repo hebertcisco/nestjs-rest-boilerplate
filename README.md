@@ -15,6 +15,13 @@ The shared is the place where the shared resources are implemented. It is the pl
 ### Other
 It also has the useful resource parts, scrips, constants and routes.
 
+## Postgres with Docker
+> Up an image and run postgres image with docker
+
+```sh
+docker run --name db_pg -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -d postgres:11
+```
+
 ## Environment variables
 
 > Create a `.env` file in the root directory of your project
@@ -28,8 +35,45 @@ POSTGRES_PORT=5432
 
 PORT=3333
 APP_SECRET='senhona_grossa'
+MODE="DEV"
 
 BASE_URL_EXTERNAL_INTEGRATION='https://api.github.com/authorizations'
 CLIENT_SECRET_EXTERNAL_INTEGRATION='id-grandao-e-secreto'
-CLIENT_ID_EXTERNAL_INTEGRATION='1'
+CLIENT_ID_EXTERNAL_INTEGRATION=1
+```
+
+## Runing the application with docker
+
+### Run as dev 
+
+```sh
+docker-compose up dev
+```
+
+### Run as prod
+
+```sh
+docker-compose up -d prod
+```
+
+## Runing the application with npm scrips
+
+### Run as dev
+
+```sh
+npm run dev
+```
+or
+```sh
+npm run dev:test
+```
+
+### Run as prod
+
+```sh
+npm run start
+```
+or 
+```sh
+npm run start:prod
 ```
