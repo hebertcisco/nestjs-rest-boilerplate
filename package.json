@@ -27,7 +27,7 @@
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "git:ruf": "git reset --hard HEAD",
         "git:pull": "git pull",
-        "kill:node": "kill -9 $(sudo lsof -t -i:3000)",
+        "kill:node": "kill -9 $(sudo lsof -t -i:3333)",
         "clear": "clear",
         "audit:fix": "npm audit fix"
     },
