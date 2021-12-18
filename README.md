@@ -3,8 +3,8 @@
 ## Introduction
 The main file is [src/server.ts](src/server.ts). The server is divided into domain, infra, and shared resources.
 
-### Domain
-The domain is the core of the application. It is the place where the business logic is implemented.
+### Modules
+The Modules is the core of the application. It is the place where the business logic is implemented.
 
 ### Infra
 The infra is the place where the infrastructure is implemented. It is the place where the database is implemented.
