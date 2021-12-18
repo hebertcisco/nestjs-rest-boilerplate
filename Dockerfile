@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install glob rimraf
 
-RUN npm install --only=development
+RUN npm install --only=development --silent
 
 COPY . .
 
@@ -21,10 +21,12 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install --only=production
+RUN npm install --only=production --silent
 
 COPY . .
 
 COPY --from=development /usr/src/app/dist ./dist
+
+EXPOSE 3000
 
 CMD ["node", "dist/main"]

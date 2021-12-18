@@ -17,6 +17,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     restart: always
+
   prod:
     container_name: nestjs_api_prod
     image: nestjs-api-prod:1.0.0

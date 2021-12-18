@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import 'reflect-metadata';
 
 dotenv.config();
+const port = process.env.PORT;
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
@@ -27,8 +28,8 @@ async function bootstrap() {
         const document = SwaggerModule.createDocument(app, config);
         SwaggerModule.setup('docs', app, document);
     }
-    const port = process.env.PORT;
+
     await app.listen(port || 3000);
 }
 
-bootstrap().then((reason) => reason);
+bootstrap().then(() => console.log('Server is running on port: ' + port));

@@ -1,7 +1,5 @@
 .env.save
 .env.hml
-.env*
-*.env*
 # compiled output
 /dist
 /node_modules
@@ -14,8 +12,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-package-lock.json
-yarn.lock
 # OS
 .DS_Store
 
@@ -42,3 +38,9 @@ ormconfig.json
 documentation/
 
 .env
+
+# personal notes
+notes
+
+# pdf files
+files/*.pdf
