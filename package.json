@@ -84,7 +84,7 @@
         "reflect-metadata": "^0.1.13",
         "rimraf": "^3.0.2",
         "rxjs": "^6.6.6",
-        "socket.io": "^4.3.0",
+        "socket.io": "4.4.0",
         "swagger-ui-express": "^4.1.6",
         "tsyringe": "^4.6.0",
         "typeorm": "^0.2.32",
