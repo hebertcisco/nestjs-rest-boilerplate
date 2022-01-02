@@ -62,7 +62,7 @@
         "cors": "2.8.5",
         "data-crypto": "1.4.4",
         "date-fns": "2.27.0",
-        "date-handle": "0.0.1",
+        "date-handle": "0.0.2",
         "dotenv": "8.6.0",
         "expmidd": "0.1.0",
         "express": "4.17.2",
