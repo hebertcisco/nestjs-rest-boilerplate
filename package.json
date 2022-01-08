@@ -78,7 +78,7 @@
         "nestjs-pino-logger": "0.1.0",
         "pg": "8.7.1",
         "pgnode": "0.0.9",
-        "pino": "6.13.3",
+        "pino": "6.13.4",
         "pino-http": "5.8.0",
         "qs": "6.10.2",
         "reflect-metadata": "0.1.13",
