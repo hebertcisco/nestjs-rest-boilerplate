@@ -72,7 +72,7 @@
         "http-status": "1.5.0",
         "jsonwebtoken": "8.5.1",
         "mailjet-abstraction": "0.0.2",
-        "moment": "2.29.1",
+        "moment": "2.29.2",
         "mongoose": "5.13.14",
         "morgan": "1.10.0",
         "nestjs-pino-logger": "0.1.0",
