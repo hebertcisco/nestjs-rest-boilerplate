@@ -49,7 +49,7 @@
         "@nestjs/swagger": "4.8.2",
         "@nestjs/throttler": "2.0.1",
         "@nestjs/typeorm": "7.1.5",
-        "axios": "0.24.0",
+        "axios": "0.26.1",
         "bcryptjs": "2.4.3",
         "beautlog": "0.3.1",
         "body-parser": "1.19.1",
