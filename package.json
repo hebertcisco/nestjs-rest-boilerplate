@@ -38,7 +38,7 @@
         "prepare:enviroment": "node scripts/dev-enviroment.cjs",
         "postprepare:enviroment": "npm run dev:test",
         "prepostprepare:enviroment": "npm run pretypeorm",
-        "pretest": "npm run prepare:enviroment",
+        "pretest": "npm run prepare:enviroment"
     },
     "dependencies": {
         "@nestjs/common": "7.6.18",
