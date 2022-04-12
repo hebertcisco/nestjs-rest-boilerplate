@@ -70,7 +70,7 @@
         "morgan": "1.10.0",
         "nestjs-pino-logger": "0.1.0",
         "pg": "8.7.1",
-        "pgnode": "0.0.9",
+        "pgnode": "1.1.0",
         "pino": "6.13.3",
         "pino-http": "5.8.0",
         "qs": "6.10.3",
