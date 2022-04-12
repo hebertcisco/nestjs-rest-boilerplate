@@ -36,10 +36,6 @@ POSTGRES_PORT=5432
 PORT=3333
 APP_SECRET='senhona_grossa'
 MODE="DEV"
-
-BASE_URL_EXTERNAL_INTEGRATION='https://api.github.com/authorizations'
-CLIENT_SECRET_EXTERNAL_INTEGRATION='id-grandao-e-secreto'
-CLIENT_ID_EXTERNAL_INTEGRATION=1
 ```
 
 ## Runing the application with docker
