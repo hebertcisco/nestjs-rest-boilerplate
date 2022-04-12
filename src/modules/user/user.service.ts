@@ -10,7 +10,6 @@ import { UserSessionsDto } from './dto/user-sessions.dto';
 import authConfig from '../../infra/config/auth';
 import { AuthResponse, TUserList } from './user.type';
 import { Response } from 'express';
-import { desTransformAmount } from '../../shared/helpers/transformAmount';
 import { UserSQL } from './user.sql';
 import { UserListDataDto } from './dto/user-list-data';
 
