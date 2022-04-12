@@ -10,7 +10,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { configService } from './infra/config/config.service';
-//import { IntegrationModule } from './modules/integration/integration.module';
 import { RolesMiddleware } from './infra/auth/roles.middleware';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { ThrottlerModule } from '@nestjs/throttler';
@@ -25,7 +24,6 @@ import { UserModule } from './modules/user/user.module';
             rootPath: join(__dirname, '..', 'public'),
         }),
         TypeOrmModule.forRoot(configService.getTypeOrmConfig()),
-        //IntegrationModule,
         CacheModule.register(),
         LoggerModule.forRoot({
             httpLoggerExclude: ['/', '/status'],

@@ -34,7 +34,9 @@
         "git:pull": "git pull",
         "kill:node": "kill -9 $(sudo lsof -t -i:3333)",
         "clear": "clear",
-        "audit:fix": "npm audit fix"
+        "audit:fix": "npm audit fix",
+        "prepare": "node scripts/dev-enviroment.cjs",
+        "postprepare": "npm run dev:test"
     },
     "dependencies": {
         "@nestjs/common": "7.6.18",
@@ -52,7 +54,7 @@
         "@vercel/node": "1.12.1",
         "axios": "0.24.0",
         "bcryptjs": "2.4.3",
-        "beautlog": "0.3.1",
+        "beautlog": "^0.4.4",
         "body-parser": "1.19.1",
         "cache-manager": "3.6.0",
         "celebrate": "15.0.0",
