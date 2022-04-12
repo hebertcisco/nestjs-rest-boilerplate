@@ -1936,10 +1936,10 @@
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/pg@8.6.4":
-  version "8.6.4"
-  resolved "https://registry.npmjs.org/@types/pg/-/pg-8.6.4.tgz"
-  integrity sha512-uYA7UMVzDFpJobCrqwW/iWkFmvizy6knIUgr0Quaw7K1Le3ZnF7hI3bKqFoxPZ+fju1Sc7zdTvOl9YfFZPcmeA==
+"@types/pg@8.6.5":
+  version "8.6.5"
+  resolved "https://registry.yarnpkg.com/@types/pg/-/pg-8.6.5.tgz#2dce9cb468a6a5e0f1296a59aea3ac75dd27b702"
+  integrity sha512-tOkGtAqRVkHa/PVZicq67zuujI4Oorfglsr2IbKofDwBSysnaqSx7W1mDqFqdkGE6Fbgh+PZAl0r/BWON/mozw==
   dependencies:
     "@types/node" "*"
     pg-protocol "*"
@@ -7316,7 +7316,7 @@ pg-int8@1.0.1:
   resolved "https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz"
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
-pg-pool@^3.4.1, pg-pool@^3.5.1:
+pg-pool@^3.5.1:
   version "3.5.1"
   resolved "https://registry.npmjs.org/pg-pool/-/pg-pool-3.5.1.tgz"
   integrity sha512-6iCR0wVrro6OOHFsyavV+i6KYL4lVNyYAB9RD18w66xSzN+d8b66HiwuP30Gp1SH5O9T82fckkzsRjlrhD0ioQ==
@@ -7337,22 +7337,9 @@ pg-types@^2.1.0, pg-types@^2.2.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@8.7.1:
-  version "8.7.1"
-  resolved "https://registry.npmjs.org/pg/-/pg-8.7.1.tgz"
-  integrity sha512-7bdYcv7V6U3KAtWjpQJJBww0UEsWuh4yQ/EjNf2HeO/NnvKjpvhEIe/A/TleP6wtmSKnUnghs5A9jUoK6iDdkA==
-  dependencies:
-    buffer-writer "2.0.0"
-    packet-reader "1.0.0"
-    pg-connection-string "^2.5.0"
-    pg-pool "^3.4.1"
-    pg-protocol "^1.5.0"
-    pg-types "^2.1.0"
-    pgpass "1.x"
-
-pg@^8.7.1:
+pg@8.7.3, pg@^8.7.1:
   version "8.7.3"
-  resolved "https://registry.npmjs.org/pg/-/pg-8.7.3.tgz"
+  resolved "https://registry.yarnpkg.com/pg/-/pg-8.7.3.tgz#8a5bdd664ca4fda4db7997ec634c6e5455b27c44"
   integrity sha512-HPmH4GH4H3AOprDJOazoIcpI49XFsHCe8xlrjHkWiapdbHK+HLtbm/GQzXYAZwmPju/kzKhjaSfMACG+8cgJcw==
   dependencies:
     buffer-writer "2.0.0"
