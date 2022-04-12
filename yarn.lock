@@ -4413,12 +4413,10 @@ create-require@^1.1.0:
   resolved "https://registry.npmjs.org/create-require/-/create-require-1.1.1.tgz"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cron@1.8.2:
-  version "1.8.2"
-  resolved "https://registry.npmjs.org/cron/-/cron-1.8.2.tgz"
-  integrity sha512-Gk2c4y6xKEO8FSAUTklqtfSr7oTq0CiPQeLBG5Fl0qoXpZyMcj1SG59YL+hqq04bu6/IuEA7lMkYDAplQNKkyg==
-  dependencies:
-    moment-timezone "^0.5.x"
+croner@~4.1.92:
+  version "4.1.97"
+  resolved "https://registry.yarnpkg.com/croner/-/croner-4.1.97.tgz#6e373dc7bb3026fab2deb0d82685feef20796766"
+  integrity sha512-/f6gpQuxDaqXu+1kwQYSckUglPaOrHdbIlBAu0YuW8/Cdb45XwXYNUBXg3r/9Mo6n540Kn/smKcZWko5x99KrQ==
 
 cross-spawn@^6.0.0:
   version "6.0.5"
@@ -8159,14 +8157,7 @@ module-details-from-path@^1.0.3:
   resolved "https://registry.npmjs.org/module-details-from-path/-/module-details-from-path-1.0.3.tgz"
   integrity sha1-EUyUlnPiqKNenTV4hSeqN7Z52is=
 
-moment-timezone@^0.5.x:
-  version "0.5.34"
-  resolved "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.34.tgz"
-  integrity sha512-3zAEHh2hKUs3EXLESx/wsgw6IQdusOT8Bxm3D9UrHPQR7zlMmzwybC8zHEM1tQ4LJwP7fcxrWr8tuBg05fFCbg==
-  dependencies:
-    moment ">= 2.9.0"
-
-moment@*, moment@2.29.2, "moment@>= 2.9.0", moment@^2.29.1:
+moment@*, moment@2.29.2, moment@^2.29.1:
   version "2.29.2"
   resolved "https://registry.npmjs.org/moment/-/moment-2.29.2.tgz"
   integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
@@ -9067,10 +9058,17 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-pidusage@2.0.21, pidusage@^2.0.21:
+pidusage@^2.0.21:
   version "2.0.21"
   resolved "https://registry.npmjs.org/pidusage/-/pidusage-2.0.21.tgz"
   integrity sha512-cv3xAQos+pugVX+BfXpHsbyz/dLzX+lr44zNMsYiGxUw+kV5sgQCIcLd1z+0vq+KyC7dJ+/ts2PsfgWfSC3WXA==
+  dependencies:
+    safe-buffer "^5.2.1"
+
+pidusage@~3.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pidusage/-/pidusage-3.0.0.tgz#69108079724c9afdd958644b920bc40bac964044"
+  integrity sha512-8VJLToXhj+RYZGNVw8oxc7dS54iCQXUJ+MDFHezQ/fwF5B8W4OWodAMboc1wb08S/4LiHwAmkT4ohf/d3YPPsw==
   dependencies:
     safe-buffer "^5.2.1"
 
@@ -9191,10 +9189,10 @@ pm2-sysmonit@^1.2.8:
     systeminformation "^5.7"
     tx2 "~1.0.4"
 
-pm2@5.1.2:
-  version "5.1.2"
-  resolved "https://registry.npmjs.org/pm2/-/pm2-5.1.2.tgz"
-  integrity sha512-2nJQeCWjkN0WnTkWctaoZpqrJTiUN/Icw76IMVHHzPhr/p7yQYlEQgHzlL5IFWxO2N1HdBNXNdZft2p4HUmUcA==
+pm2@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-5.2.0.tgz#fda71fab4b8fcfa5b7f546ca55a6e59e9ec5a68d"
+  integrity sha512-PO5hMVhQ85cTszFM++6v07Me9hPJMkFbHjkFigtMMk+La8ty2wCi2dlBTeZYJDhPUSjK8Ccltpq2buNRcyMOTw==
   dependencies:
     "@pm2/agent" "~2.0.0"
     "@pm2/io" "~5.0.0"
@@ -9206,7 +9204,7 @@ pm2@5.1.2:
     chokidar "^3.5.1"
     cli-tableau "^2.0.0"
     commander "2.15.1"
-    cron "1.8.2"
+    croner "~4.1.92"
     dayjs "~1.8.25"
     debug "^4.3.1"
     enquirer "2.3.6"
@@ -9214,7 +9212,7 @@ pm2@5.1.2:
     fclone "1.0.11"
     mkdirp "1.0.4"
     needle "2.4.0"
-    pidusage "2.0.21"
+    pidusage "~3.0"
     pm2-axon "~4.0.1"
     pm2-axon-rpc "~0.7.1"
     pm2-deploy "~1.0.2"
