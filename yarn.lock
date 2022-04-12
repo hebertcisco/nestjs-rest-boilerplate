@@ -3336,15 +3336,12 @@ bcryptjs@2.4.3, bcryptjs@^2.4.3:
   resolved "https://registry.npmjs.org/bcryptjs/-/bcryptjs-2.4.3.tgz"
   integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
-beautlog@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/beautlog/-/beautlog-0.3.1.tgz"
-  integrity sha512-q3Ppno4J/7QSWqe0HswUQKjOL3af0SlI9d8+e0ilOxLrqViIbTU0+ISVsvJcz/uKHjMv2mMq2C6b80S7Y7wjVQ==
+beautlog@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/beautlog/-/beautlog-0.4.4.tgz#85c34b0bd7509fc4ca62b694b40a787ae44a1af7"
+  integrity sha512-nEXE7PYrHzw7TmB00bjn3i05/Yf4b8UY5kAtq619Ebc05PQRJH7pQczlSFTK+m+J2+04GIYodVd9dKoEANt1Ng==
   dependencies:
-    chalk "^5.0.0"
-    color-regex "^1.0.2"
-    date-handle "^0.0.1"
-    log-beautify "^1.2.0"
+    colorette "^2.0.16"
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -3736,7 +3733,7 @@ capture-exit@^2.0.0:
   dependencies:
     rsvp "^4.8.4"
 
-chalk@3.0.0, chalk@^3.0.0, chalk@~3.0.0:
+chalk@3.0.0, chalk@~3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
   integrity sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
@@ -3760,11 +3757,6 @@ chalk@^2.0.0:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
-
-chalk@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/chalk/-/chalk-5.0.1.tgz"
-  integrity sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -4047,15 +4039,15 @@ color-name@~1.1.4:
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-regex@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/color-regex/-/color-regex-1.0.2.tgz"
-  integrity sha512-TBRKov2oivOPjISo/P3HwHzAm39b4g5Ggx+wJqjLrUcJ9EW2WjqO4j81Xo9Jzeu3Z2u+x9nx2A/Pt8ZSYd/d3Q==
-
 color-support@^1.1.3:
   version "1.1.3"
   resolved "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
+
+colorette@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
+  integrity sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==
 
 colors@1.4.0, colors@^1.1.2:
   version "1.4.0"
@@ -4397,13 +4389,6 @@ date-handle@0.0.2:
   version "0.0.2"
   resolved "https://registry.npmjs.org/date-handle/-/date-handle-0.0.2.tgz"
   integrity sha512-TVMMJtJkafaL+ST/MYTgiDW+PycNisktkHRkjy3v0ehXr/sTDq2+3BLBTJyYPnmDFuQXbwn1YOYcYGOS1EhiSg==
-  dependencies:
-    moment "^2.29.1"
-
-date-handle@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/date-handle/-/date-handle-0.0.1.tgz"
-  integrity sha512-w+QbUHCdb067uMYWhUCo4rXpC6lpXUov0GZHZBC/+jV1hSCAF0tSnhYYo508R5r8vQLO5g6wCpNu0TstmzatXg==
   dependencies:
     moment "^2.29.1"
 
@@ -7593,14 +7578,6 @@ lodash@4.17.21, lodash@4.x, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.21, l
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
-
-log-beautify@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/log-beautify/-/log-beautify-1.2.0.tgz"
-  integrity sha512-730dy7bmL9LcrX9q0ybM+M2eqynzmPqG5bilgs1k2hXsX0ad9RKf3lCMoSDVn8uDjYd9mlJkPXWnIDWpOmzTNw==
-  dependencies:
-    chalk "^3.0.0"
-    color-regex "^1.0.2"
 
 log-driver@^1.2.7:
   version "1.2.7"
