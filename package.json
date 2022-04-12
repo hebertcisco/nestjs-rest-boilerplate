@@ -36,7 +36,8 @@
         "clear": "clear",
         "audit:fix": "npm audit fix",
         "prepare:enviroment": "node scripts/dev-enviroment.cjs",
-        "postprepare:enviroment": "npm run dev:test"
+        "postprepare:enviroment": "npm run dev:test",
+        "prepostprepare:enviroment": "npm run pretypeorm"
     },
     "dependencies": {
         "@nestjs/common": "7.6.18",

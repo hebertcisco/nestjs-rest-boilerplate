@@ -32,26 +32,17 @@ export class UserService {
     public async findOne(id: string): Promise<User> {
         return await this.user_repo.findOne(id);
     }
-    public async create(createUserDto: CreateUserDto, res: Response) {
-        const passwordHash = await bcrypt.hash(createUserDto.password, 8);
-        const user = this.user_repo.create({
-            ...createUserDto,
-            password: passwordHash,
-        });
-        return await this.user_repo
-            .save(user)
-            .then(async (user) => {
-                return user;
-            })
-            .catch((err: IDatabaseErrorResponse) => {
-                throw new HttpException(
-                    {
-                        message: err.message,
-                        status: err.status,
-                    },
-                    HttpStatus.BAD_REQUEST,
-                );
+    public async create(createUserDto: CreateUserDto) {
+        try {
+            const passwordHash = await bcrypt.hash(createUserDto.password, 8);
+            const user = this.user_repo.create({
+                ...createUserDto,
+                password: passwordHash,
             });
+            return this.user_repo.save(user);
+        } catch (error) {
+            throw error;
+        }
     }
     async auth(userSessionsDto: UserSessionsDto): Promise<AuthResponse> {
         const user = await this.user_repo.findOne({
