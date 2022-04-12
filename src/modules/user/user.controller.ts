@@ -10,10 +10,7 @@ import {
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { ApiHeader } from '@nestjs/swagger';
-import { IDatabaseErrorResponse } from '../../shared/interfaces/httpResponses.interface';
-import { Response } from 'express';
 import { UserSessionsDto } from './dto/user-sessions.dto';
-import { AuthResponse } from './user.type';
 import { UserListDataDto } from './dto/user-list-data';
 
 @ApiHeader({

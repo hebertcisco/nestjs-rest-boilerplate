@@ -4,12 +4,10 @@ import bcrypt from 'bcryptjs';
 import { User } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { IDatabaseErrorResponse } from '../../shared/interfaces/httpResponses.interface';
 import jwt from 'jsonwebtoken';
 import { UserSessionsDto } from './dto/user-sessions.dto';
 import authConfig from '../../infra/config/auth';
 import { AuthResponse, TUserList } from './user.type';
-import { Response } from 'express';
 import { UserSQL } from './user.sql';
 import { UserListDataDto } from './dto/user-list-data';
 

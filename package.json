@@ -36,8 +36,7 @@
         "clear": "clear",
         "audit:fix": "npm audit fix",
         "prepare:enviroment": "node scripts/dev-enviroment.cjs",
-        "prepostprepare:enviroment": "npm run pretypeorm",
-        "pretest": "npm run prepare:enviroment"
+        "prepostprepare:enviroment": "npm run pretypeorm"
     },
     "dependencies": {
         "@nestjs/common": "7.6.18",
@@ -111,6 +110,7 @@
         "@types/yup": "0.29.13",
         "@typescript-eslint/eslint-plugin": "4.33.0",
         "@typescript-eslint/parser": "4.33.0",
+        "@typescript-eslint/typescript-estree": "^5.19.0",
         "eslint": "7.32.0",
         "eslint-config-airbnb-base": "15.0.0",
         "eslint-config-prettier": "8.5.0",

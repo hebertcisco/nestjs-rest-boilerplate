@@ -1,18 +1,27 @@
-import { Controller, Get, Res } from '@nestjs/common';
+import {
+    CacheInterceptor,
+    Controller,
+    Get,
+    HttpCode,
+    Res,
+    UseInterceptors,
+} from '@nestjs/common';
 import { Response } from 'express';
 import { AppService } from './app.service';
 
 @Controller()
+@UseInterceptors(CacheInterceptor)
 export class AppController {
     constructor(private readonly appService: AppService) {}
 
     @Get('/')
+    @HttpCode(302)
     index(@Res() res: Response) {
-        res.status(302).redirect('/status');
+        res.redirect('/status');
     }
     @Get('/status')
-    info(@Res() res: Response) {
-        res.status(200);
-        res.json(this.appService.info());
+    @HttpCode(200)
+    info() {
+        return this.appService.info();
     }
 }
