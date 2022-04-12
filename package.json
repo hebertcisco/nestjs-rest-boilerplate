@@ -1,7 +1,7 @@
 {
     "name": "nestjs-rest-boilerplate",
     "version": "0.0.1",
-    "description": "",
+    "description": "Nestjs rest API boilerplate - Postgres | TypeORM | Throttler | with Auth Middleware and base to external integration with Outh2 APIS",
     "author": "Hebert Barros <hebert@hotbrains.com.br>",
     "private": true,
     "license": "UNLICENSED",
