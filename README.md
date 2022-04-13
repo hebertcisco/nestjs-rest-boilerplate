@@ -1,9 +1,7 @@
 # Basic documentation
 
-[![Node.js CI](https://github.com/hebertcisco/nestjs-rest-boilerplate/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/hebertcisco/nestjs-rest-boilerplate/actions/workflows/node.js.yml)
-
 ## Introduction
-The main file is [src/server.ts](src/server.ts). The server is divided into domain, infra, and shared resources.
+The main file is [src/main.ts](src/main.ts). The server is divided into domain, infra, and shared resources.
 
 ### Modules
 The Modules is the core of the application. It is the place where the business logic is implemented.
