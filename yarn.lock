@@ -4623,7 +4623,7 @@ fs.realpath@^1.0.0:
 
 fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 ftp@^0.3.10:
@@ -6437,10 +6437,10 @@ mongodb@4.3.1:
   optionalDependencies:
     saslprep "^1.0.3"
 
-mongoose@*, mongoose@6.2.10:
-  version "6.2.10"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.2.10.tgz"
-  integrity sha512-Yp+6UH5M0AlxAVGdC2/Deq0St+2qW73oKCnhJDr83bOZ12eflTLTT5uQF0p6KzvtFj86XWbq/7ApvO4yW6h1sA==
+mongoose@*, mongoose@6.2.11:
+  version "6.2.11"
+  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.2.11.tgz"
+  integrity sha512-YqYAFTOqKthsFduM1IZCArIAwScFJKWoE3pEwmnR7UMw9mynEnOc6c4gBvAon+NtPdB0RAP6ppd3aOvLrVth2g==
   dependencies:
     bson "^4.2.2"
     kareem "2.3.5"
@@ -7336,7 +7336,7 @@ proxy-from-env@^1.0.0:
 
 proxy-middleware@latest:
   version "0.15.0"
-  resolved "https://registry.yarnpkg.com/proxy-middleware/-/proxy-middleware-0.15.0.tgz#a3fdf1befb730f951965872ac2f6074c61477a56"
+  resolved "https://registry.npmjs.org/proxy-middleware/-/proxy-middleware-0.15.0.tgz"
   integrity sha1-o/3xvvtzD5UZZYcqwvYHTGFHelY=
 
 psl@^1.1.33:
