@@ -1357,7 +1357,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@nestjs/cli@^8.2.5":
+"@nestjs/cli@8.2.5":
   version "8.2.5"
   resolved "https://registry.npmjs.org/@nestjs/cli/-/cli-8.2.5.tgz"
   integrity sha512-b5DzZ08q/6iWvLz+n2DhEyZ3rsOurN1ec1jYQaWC5DCVQoZCwyOew48bVf01kevTK4eZyQxPwuErf7HnFAc0oQ==
@@ -1385,7 +1385,7 @@
     webpack "5.71.0"
     webpack-node-externals "3.0.0"
 
-"@nestjs/common@^8.4.4":
+"@nestjs/common@8.4.4":
   version "8.4.4"
   resolved "https://registry.npmjs.org/@nestjs/common/-/common-8.4.4.tgz"
   integrity sha512-QHi7QcgH/5Jinz+SCfIZJkFHc6Cch1YsAEGFEhi6wSp6MILb0sJMQ1CX06e9tCOAjSlBwaJj4PH0eFCVau5v9Q==
@@ -1395,7 +1395,7 @@
     tslib "2.3.1"
     uuid "8.3.2"
 
-"@nestjs/core@^8.4.4":
+"@nestjs/core@8.4.4":
   version "8.4.4"
   resolved "https://registry.npmjs.org/@nestjs/core/-/core-8.4.4.tgz"
   integrity sha512-Ef3yJPuzAttpNfehnGqIV5kHIL9SHptB5F4ERxoU7pT61H3xiYpZw6hSjx68cJO7cc6rm7/N+b4zeuJvFHtvBg==
@@ -1413,7 +1413,7 @@
   resolved "https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-1.0.1.tgz"
   integrity sha512-NFvofzSinp00j5rzUd4tf+xi9od6383iY0JP7o0Bnu1fuItAUkWBgc4EKuIQ3D+c2QI3i9pG1kDWAeY27EMGtg==
 
-"@nestjs/platform-express@^8.4.4":
+"@nestjs/platform-express@8.4.4":
   version "8.4.4"
   resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-8.4.4.tgz"
   integrity sha512-n/H83uzw154v6NVVSg6mniZIvYWtYp0dtNpU9O1qdEmDO030p0tBkeIRoDtpeOVvL2fW5PsHiUYS7HY4tNfykQ==
@@ -1442,7 +1442,7 @@
   dependencies:
     path-to-regexp "0.1.7"
 
-"@nestjs/swagger@^5.2.1":
+"@nestjs/swagger@5.2.1":
   version "5.2.1"
   resolved "https://registry.npmjs.org/@nestjs/swagger/-/swagger-5.2.1.tgz"
   integrity sha512-7dNa08WCnTsW/oAk3Ujde+z64JMfNm19DhpXasFR8oJp/9pggYAbYU927HpA+GJsSFJX6adjIRZsCKUqaGWznw==
@@ -1451,7 +1451,7 @@
     lodash "4.17.21"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@^8.4.4":
+"@nestjs/testing@8.4.4":
   version "8.4.4"
   resolved "https://registry.npmjs.org/@nestjs/testing/-/testing-8.4.4.tgz"
   integrity sha512-eGj0Lbi0ONMkjDKbKQHoGX+ecGdrGRZ81I8i6fH4dx9jIR0p4MsBlW964f6Swn1MGkPm/xxomJmBWLPqZEjF7g==
@@ -1466,7 +1466,7 @@
   dependencies:
     md5 "^2.2.1"
 
-"@nestjs/typeorm@^8.0.3":
+"@nestjs/typeorm@8.0.3":
   version "8.0.3"
   resolved "https://registry.npmjs.org/@nestjs/typeorm/-/typeorm-8.0.3.tgz"
   integrity sha512-tf9rTXP6LeFInkwd+tktQhtLRsKp4RRYImprqT8gcHcJDx+xMP1IygnXELOKwF5vo2/mnhrGtBlRQ/iiS6170g==
@@ -7182,7 +7182,7 @@ pm2-sysmonit@^1.2.8:
     systeminformation "^5.7"
     tx2 "~1.0.4"
 
-pm2@^5.2.0:
+pm2@5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/pm2/-/pm2-5.2.0.tgz"
   integrity sha512-PO5hMVhQ85cTszFM++6v07Me9hPJMkFbHjkFigtMMk+La8ty2wCi2dlBTeZYJDhPUSjK8Ccltpq2buNRcyMOTw==
