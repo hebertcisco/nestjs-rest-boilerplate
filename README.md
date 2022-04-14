@@ -2,21 +2,6 @@
 
 # Basic documentation
 
-## Introduction
-The main file is [src/main.ts](src/main.ts). The server is divided into domain, infra, and shared resources.
-
-### Modules
-The Modules is the core of the application. It is the place where the business logic is implemented.
-
-### Infra
-The infra is the place where the infrastructure is implemented. It is the place where the database is implemented.
-
-### Shared
-The shared is the place where the shared resources are implemented. It is the place where the configuration is implemented.
-
-### Other
-It also has the useful resource parts, scrips, constants and routes.
-
 ## Postgres with Docker
 > Up an image and run postgres image with docker
 
@@ -55,6 +40,13 @@ docker-compose up -d prod
 ```
 
 ## Runing the application with npm scrips
+
+```sh
+npm install && npm run build
+```
+```sh
+npm run prepare:enviroment
+```
 
 ### Run as dev
 
