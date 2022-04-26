@@ -1882,10 +1882,10 @@
   dependencies:
     "@types/express" "*"
 
-"@types/node@*", "@types/node@16.11.28":
-  version "16.11.28"
-  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.28.tgz"
-  integrity sha512-l/y1ZZpWqevemVQmk0Q1TPohlJTul7u9ysq3bw6xlRDO8z+98JBI6gp4JS0OK8YkWUdYxnJU35H4vOzuiOFIag==
+"@types/node@*", "@types/node@16.11.31":
+  version "16.11.31"
+  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.31.tgz"
+  integrity sha512-wh/d0pcu/Ie2mqTIqh4tjd0mLAB4JWxOjHQtLN20HS7sjMHiV4Afr+90hITTyZcxowwha5wjv32jGEn1zkEFMg==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
