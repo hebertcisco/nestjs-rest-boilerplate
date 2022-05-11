@@ -113,7 +113,7 @@
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-import": "2.26.0",
         "eslint-plugin-prettier": "4.0.0",
-        "jest": "28.0.3",
+        "jest": "28.1.0",
         "nodemon": "2.0.16",
         "pm2": "5.2.0",
         "prettier": "2.6.2",
