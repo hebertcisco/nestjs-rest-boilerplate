@@ -100,7 +100,7 @@
         "@types/mongoose": "5.11.97",
         "@types/morgan": "1.9.3",
         "@types/multer": "1.4.7",
-        "@types/node": "16.11.34",
+        "@types/node": "16.11.35",
         "@types/pg": "8.6.5",
         "@types/supertest": "2.0.12",
         "@types/uuidv4": "5.0.0",
