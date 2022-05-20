@@ -78,9 +78,9 @@
     },
     "devDependencies": {
         "@babel/cli": "7.17.10",
-        "@babel/core": "7.17.10",
+        "@babel/core": "7.18.0",
         "@babel/node": "7.17.10",
-        "@babel/preset-env": "7.17.10",
+        "@babel/preset-env": "7.18.0",
         "@compodoc/compodoc": "1.1.19",
         "@nestjs/cli": "8.2.6",
         "@nestjs/schematics": "8.0.10",
