@@ -7,6 +7,7 @@
 # Basic documentation
 
 ## Postgres with Docker
+
 > Up an image and run postgres image with docker
 
 ```sh
@@ -18,20 +19,29 @@ docker run --name db_pg -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_U
 > Create a `.env` file in the root directory of your project
 
 ```dotenv
-POSTGRES_DATABASE="postgres"
-POSTGRES_HOST="127.0.0.1"
-POSTGRES_USER="postgres"
-POSTGRES_PASSWORD="postgres"
-POSTGRES_PORT=5432
+# APP CONFIGURATION
+PORT=3333                  # default port to listen
+APP_SECRET='strong-secret' #x-api-key
+NODE_ENV="development"     #development or production
 
-PORT=3333
-APP_SECRET='senhona_grossa'
-MODE="DEV"
+# POSTGRES DATABASE
+POSTGRES_DATABASE="postgres" # database name
+POSTGRES_HOST="127.0.0.1"       # database host
+POSTGRES_USER="postgres"        # database user
+POSTGRES_PASSWORD="postgres"    # database password
+POSTGRES_PORT=5432              # default
+POSTGRES_SYNC=true              # boolean
+POSTGRES_LOGS=true              # boolean
+
+# REDIS DATABASE
+REDIS_HOST=localhost # redis host
+REDIS_PORT=6379      # redis port
+REDIS_PASSWORD=redis # redis password
 ```
 
 ## Runing the application with docker
 
-### Run as dev 
+### Run as dev
 
 ```sh
 docker-compose up dev
@@ -48,6 +58,7 @@ docker-compose up -d prod
 ```sh
 npm install && npm run build
 ```
+
 ```sh
 npm run prepare:enviroment
 ```
@@ -57,7 +68,9 @@ npm run prepare:enviroment
 ```sh
 npm run dev
 ```
+
 or
+
 ```sh
 npm run dev:test
 ```
@@ -67,7 +80,9 @@ npm run dev:test
 ```sh
 npm run start
 ```
-or 
+
+or
+
 ```sh
 npm run start:prod
 ```
