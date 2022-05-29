@@ -1,13 +1,13 @@
-import { User } from './entities/user.entity';
+import type { User } from './entities/user.entity';
 
-export type AuthResponse = {
+export type AuthResponseType = {
     token: string;
     user: User;
 };
-export type TUserListSQL = {
+export type UserListSQLType = {
     limit: number;
 };
-export type TUserList = {
+export type UserListType = {
     avatar: string;
     name: string;
     email: string;

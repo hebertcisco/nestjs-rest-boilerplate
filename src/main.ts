@@ -1,16 +1,26 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { configService } from './infra/config/config.service';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { ValidationPipe } from '@nestjs/common';
-import dotenv from 'dotenv';
+#!/usr/bin/env node
 import 'reflect-metadata';
 
-dotenv.config();
-const port = process.env.PORT;
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
+import { NestFactory } from '@nestjs/core';
 
-async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
+import dotenv from 'dotenv';
+import helmet from 'helmet';
+import compression from 'compression';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+
+import { PORT } from 'nest-shared/lib/shared/common/constants/global.constants';
+
+import { AppModule } from './app.module';
+import { configService } from './infra/application/application.config';
+import * as pkg from '../package.json';
+
+dotenv.config();
+
+async function bootstrap(): Promise<void> {
+    const app: INestApplication = await NestFactory.create(AppModule);
 
     app.useGlobalPipes(
         new ValidationPipe({
@@ -18,18 +28,34 @@ async function bootstrap() {
         }),
     );
     app.enableCors();
+    app.use(helmet());
+    app.use(compression());
+    app.use(bodyParser.json({ limit: '15mb' }));
+    app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));
+    app.use(
+        morgan(
+            ':date[iso] HTTP/:http-version :method :url :status :response-time ms',
+        ),
+    );
     if (!configService.isProduction()) {
         const config = new DocumentBuilder()
-            .setTitle('nestjs-rest-boilerplate')
-            .setDescription('')
-            .setVersion('0.0.1')
-            .addTag('nestjs-rest-boilerplate')
+            .setTitle(pkg.name)
+            .setDescription(pkg.description)
+            .setVersion(pkg.version)
+            .setTitle(pkg.name)
             .build();
         const document = SwaggerModule.createDocument(app, config);
         SwaggerModule.setup('docs', app, document);
     }
 
-    await app.listen(port || 3000);
+    await app.listen(PORT);
 }
 
-bootstrap().then(() => console.log('Server is running on port: ' + port));
+((): void => {
+    bootstrap()
+        .then(() => process.stdout.write(`Listening on port ${PORT}...\n`))
+        .catch((err) => {
+            process.stderr.write(`Error: ${err.message}\n`);
+            process.exit(1);
+        });
+})();

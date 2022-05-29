@@ -1,48 +1,58 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import bcrypt from 'bcryptjs';
-import { User } from './entities/user.entity';
-import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Injectable } from '@nestjs/common';
+
+import { NotFoundException, UnauthorizedException } from '@nestjs/common';
+import { Repository } from 'typeorm';
+
 import jwt from 'jsonwebtoken';
-import { UserSessionsDto } from './dto/user-sessions.dto';
-import authConfig from '../../infra/config/auth';
-import { AuthResponse, TUserList } from './user.type';
+import bcrypt from 'bcryptjs';
+
 import { UserSQL } from './user.sql';
-import { UserListDataDto } from './dto/user-list-data';
+
+import { User } from './entities/user.entity';
+
+import authConfig from '../../infra/auth/auth';
+
+import type { UserListDataDto } from './dto/user-list-data';
+import type { UserSessionsDto } from './dto/user-sessions.dto';
+import type { CreateUserDto } from './dto/create-user.dto';
+import type { AuthResponseType, UserListType } from './user.type';
 
 @Injectable()
 export class UserService {
     constructor(
-        @InjectRepository(User) private readonly user_repo: Repository<User>,
+        @InjectRepository(User)
+        private readonly userRepository: Repository<User>,
     ) {}
-    public async findUserList(dto: UserListDataDto): Promise<TUserList[]> {
-        return await this.user_repo.query(
+    public async findUserList(dto: UserListDataDto): Promise<UserListType[]> {
+        return await this.userRepository.query(
             UserSQL.findUserList({
                 ...dto,
             }),
         );
     }
     public async findAll(): Promise<User[]> {
-        return await this.user_repo.find();
+        return await this.userRepository.find();
     }
     public async findOne(id: string): Promise<User> {
-        return await this.user_repo.findOne(id);
+        return await this.userRepository.findOne(id);
     }
     public async create(createUserDto: CreateUserDto) {
         try {
             const passwordHash = await bcrypt.hash(createUserDto.password, 8);
-            const user = this.user_repo.create({
+            const user = this.userRepository.create({
                 ...createUserDto,
                 password: passwordHash,
             });
-            return this.user_repo.save(user);
+            return this.userRepository.save(user);
         } catch (error) {
             throw error;
         }
     }
-    async auth(userSessionsDto: UserSessionsDto): Promise<AuthResponse> {
-        const user = await this.user_repo.findOne({
+    public async auth(
+        userSessionsDto: UserSessionsDto,
+    ): Promise<AuthResponseType> {
+        const user = await this.userRepository.findOne({
             where: {
                 email: userSessionsDto.email,
             },
@@ -50,12 +60,7 @@ export class UserService {
 
         return new Promise(async (resolve, reject) => {
             if (!user) {
-                return reject(
-                    new HttpException(
-                        'Usuário não encontrado',
-                        HttpStatus.NOT_FOUND,
-                    ),
-                );
+                return reject(new NotFoundException('User not found'));
             }
 
             const passwordMatched = await bcrypt.compare(
@@ -64,12 +69,7 @@ export class UserService {
             );
 
             if (!passwordMatched) {
-                return reject(
-                    new HttpException(
-                        'Senha inválida',
-                        HttpStatus.UNAUTHORIZED,
-                    ),
-                );
+                return reject(new UnauthorizedException('Invalid password!'));
             }
 
             const token = jwt.sign({ id: user.id }, authConfig.secret, {
