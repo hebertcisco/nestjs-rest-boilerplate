@@ -1,5 +1,7 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
-import { Request, Response, NextFunction } from 'express';
+
+import type { Request, Response, NextFunction } from 'express';
+
 import { ValidateApiKey } from './roles.decorator';
 
 @Injectable()

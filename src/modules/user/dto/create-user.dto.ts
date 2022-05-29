@@ -1,20 +1,20 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
 import { IsEmail } from 'class-validator';
-import { randomString } from '../../../shared/helpers/random.int';
+import { chance } from '../../../../test/mock/chance';
 
 export class CreateUserDto {
-    @ApiProperty({ required: true, default: `fulano` })
+    @ApiProperty({ required: true, default: chance.name() })
     @IsString()
     @IsNotEmpty()
     name: string;
 
-    @ApiProperty({ required: true, default: `fulano@gmail.com` })
+    @ApiProperty({ required: true, default: chance.email() })
     @IsEmail()
     @IsNotEmpty()
     email: string;
 
-    @ApiProperty({ required: true, default: `${randomString(8, 'a')}` })
+    @ApiProperty({ required: true, default: '123456' })
     @IsString()
     @IsNotEmpty()
     password: string;

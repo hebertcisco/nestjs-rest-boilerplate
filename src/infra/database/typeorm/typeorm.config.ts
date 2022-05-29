@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'node:path';
 import { ConfigService } from '../../application/application.config';
 import { TypeOrmModuleOptionsExtension } from 'nest-shared/lib/shared/common/interfaces/type-orm.interface';
 

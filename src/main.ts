@@ -14,14 +14,13 @@ import morgan from 'morgan';
 import { PORT } from 'nest-shared/lib/shared/common/constants/global.constants';
 
 import { AppModule } from './app.module';
-import ConfigService from './infra/application/application.config';
+import { configService } from './infra/application/application.config';
 import * as pkg from '../package.json';
 
 dotenv.config();
 
 async function bootstrap(): Promise<void> {
     const app: INestApplication = await NestFactory.create(AppModule);
-    const configService: ConfigService = new ConfigService(process.env);
 
     app.useGlobalPipes(
         new ValidationPipe({

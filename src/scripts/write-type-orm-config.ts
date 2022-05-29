@@ -1,7 +1,7 @@
-import { configService } from '../infra/config/config.service';
-import fs = require('fs');
+import fs from 'node:fs';
+import { typeormConfig } from 'src/infra/database/typeorm/typeorm.config';
 
 fs.writeFileSync(
     'ormconfig.json',
-    JSON.stringify(configService.getTypeOrmConfig(), null, 2),
+    JSON.stringify(typeormConfig.getTypeOrmConfig(), null, 2),
 );

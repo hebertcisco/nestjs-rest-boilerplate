@@ -32,4 +32,5 @@ export class ConfigService {
         return this.getBoolean('NODE_ENV');
     }
 }
+export const configService: ConfigService = new ConfigService(process.env);
 export default ConfigService;

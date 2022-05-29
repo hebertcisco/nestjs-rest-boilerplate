@@ -7,9 +7,11 @@ import {
     HttpCode,
     Query,
 } from '@nestjs/common';
-import { UserService } from './user.service';
-import { CreateUserDto } from './dto/create-user.dto';
 import { ApiHeader } from '@nestjs/swagger';
+
+import { UserService } from './user.service';
+
+import { CreateUserDto } from './dto/create-user.dto';
 import { UserSessionsDto } from './dto/user-sessions.dto';
 import { UserListDataDto } from './dto/user-list-data';
 
