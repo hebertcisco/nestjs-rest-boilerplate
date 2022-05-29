@@ -6,7 +6,7 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import jwt from 'jsonwebtoken';
 import { UserSessionsDto } from './dto/user-sessions.dto';
-import authConfig from '../../infra/config/auth';
+import authConfig from '../../infra/auth/auth';
 import { AuthResponse, TUserList } from './user.type';
 import { UserSQL } from './user.sql';
 import { UserListDataDto } from './dto/user-list-data';
