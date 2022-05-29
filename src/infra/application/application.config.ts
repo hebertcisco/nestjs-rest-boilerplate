@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-class ConfigService {
+export class ConfigService {
     constructor(private env: { [k: string]: string | undefined }) {}
 
     public getValue(key: string, throwOnMissing = true): string {
@@ -19,17 +19,17 @@ class ConfigService {
         return value === 'true';
     }
 
-    public ensureValues(keys: string[]) {
+    public ensureValues(keys: string[]): this {
         keys.forEach((k) => this.getValue(k, true));
         return this;
     }
 
-    public getPort() {
-        return this.getValue('PORT', true);
+    public getPort(): number {
+        return Number(this.getValue('PORT', true));
     }
 
-    public isProduction() {
+    public isProduction(): boolean {
         return this.getBoolean('NODE_ENV');
     }
 }
-export { ConfigService };
+export default ConfigService;
