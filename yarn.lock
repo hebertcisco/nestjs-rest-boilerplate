@@ -5192,10 +5192,10 @@ interpret@^1.0.0:
   resolved "https://registry.npmjs.org/interpret/-/interpret-1.4.0.tgz"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-ioredis@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/ioredis/-/ioredis-5.0.5.tgz"
-  integrity sha512-H+u9YB/cBckDO5lt5+S34gGN1EuIBjjaXk31LivQWfX3G1cqZPYCiwF9qCOkqK2NsKVk+saoUN+fLBz5tc2gFw==
+ioredis@5.0.6:
+  version "5.0.6"
+  resolved "https://registry.npmjs.org/ioredis/-/ioredis-5.0.6.tgz"
+  integrity sha512-KUm7wPzIet9QrFMoMm09/4bkfVKBUD9KXwBitP3hrNkZ+A6NBndweXGwYIB/7szHcTZgfo7Kvx88SxljJV4D9A==
   dependencies:
     "@ioredis/commands" "^1.1.1"
     cluster-key-slot "^1.1.0"
