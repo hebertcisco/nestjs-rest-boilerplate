@@ -51,7 +51,7 @@
         "bcryptjs": "2.4.3",
         "beautlog": "0.4.4",
         "body-parser": "1.20.0",
-        "cache-manager": "3.6.3",
+        "cache-manager": "4.0.0",
         "chance": "^1.1.8",
         "class-transformer": "0.5.1",
         "class-validator": "0.13.2",
