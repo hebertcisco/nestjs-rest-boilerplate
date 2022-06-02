@@ -1554,10 +1554,10 @@
   dependencies:
     md5 "^2.2.1"
 
-"@nestjs/typeorm@8.0.4":
-  version "8.0.4"
-  resolved "https://registry.npmjs.org/@nestjs/typeorm/-/typeorm-8.0.4.tgz"
-  integrity sha512-l1Fv+XicVFs7j4EKTq32lJ6QomYLlXZwvug9zcts6IBDVd8rYYBPy28pyBMDzLtnm0zD4tcW298rpylL7eTZtQ==
+"@nestjs/typeorm@8.1.2":
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-8.1.2.tgz#11e353fa8e969c2fafb6bbc136bfe95e39cc9a67"
+  integrity sha512-LULAYHQ57vN1R4QhPO6UjbAROssvLn9sTIGjfh3Fjbnu9NT0C5oioQbX+DYe5fGr8MMygs5ZzGTFPG5NdILrpg==
   dependencies:
     uuid "8.3.2"
 

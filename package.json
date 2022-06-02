@@ -46,7 +46,7 @@
         "@nestjs/serve-static": "2.2.2",
         "@nestjs/swagger": "5.2.1",
         "@nestjs/throttler": "2.0.1",
-        "@nestjs/typeorm": "8.0.4",
+        "@nestjs/typeorm": "8.1.2",
         "axios": "0.27.2",
         "bcryptjs": "2.4.3",
         "beautlog": "0.4.4",
