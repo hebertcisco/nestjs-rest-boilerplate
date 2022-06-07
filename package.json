@@ -65,7 +65,7 @@
         "ioredis": "5.0.6",
         "jsonwebtoken": "8.5.1",
         "moment": "2.29.3",
-        "mongoose": "6.3.5",
+        "mongoose": "6.3.6",
         "morgan": "1.10.0",
         "nest-shared": "0.3.3",
         "pg": "8.7.3",
