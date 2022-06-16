@@ -4608,6 +4608,11 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+format@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/format/-/format-0.2.2.tgz"
+  integrity sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==
+
 formidable@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/formidable/-/formidable-2.0.1.tgz"
@@ -6561,10 +6566,10 @@ neo-async@^2.6.0, neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nest-shared@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.npmjs.org/nest-shared/-/nest-shared-0.3.3.tgz"
-  integrity sha512-TDiaw12iMjMjLszOR8p8Q64zZfX0CZra8ovL2UPbZVZJQ9zHp79p7HY/vHir9LbYCnfkXalv4XVz/kR78YPJJA==
+nest-shared@0.3.7:
+  version "0.3.7"
+  resolved "https://registry.npmjs.org/nest-shared/-/nest-shared-0.3.7.tgz"
+  integrity sha512-hHHlZ93WkMydXl8J9LY5odlp76vgCtEoBJsYP7wGgtUZZlrg92X5V8SEOQin0cR0H9tm9sL+GeyCZJl83w+qZg==
   dependencies:
     "@nestjs/axios" "^0.0.7"
     "@nestjs/common" "^8.4.4"
@@ -6574,6 +6579,7 @@ nest-shared@0.3.3:
     axios "^0.27.2"
     dotenv "^16.0.0"
     express "^4.17.3"
+    format "^0.2.2"
     moment "^2.29.2"
     multer "^1.4.4"
     qs "^6.10.3"
