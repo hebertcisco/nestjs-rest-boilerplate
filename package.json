@@ -85,7 +85,7 @@
         "@babel/node": "7.18.5",
         "@babel/preset-env": "7.18.2",
         "@compodoc/compodoc": "1.1.19",
-        "@nestjs/cli": "8.2.6",
+        "@nestjs/cli": "8.2.8",
         "@nestjs/schematics": "8.0.10",
         "@nestjs/testing": "8.4.7",
         "@types/axios": "0.14.0",
