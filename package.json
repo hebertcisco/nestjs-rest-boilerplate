@@ -119,7 +119,7 @@
         "eslint-plugin-import": "2.26.0",
         "eslint-plugin-prettier": "4.2.1",
         "jest": "28.1.2",
-        "nodemon": "2.0.18",
+        "nodemon": "2.0.19",
         "pm2": "5.2.0",
         "prettier": "2.7.1",
         "sucrase": "3.22.0",
