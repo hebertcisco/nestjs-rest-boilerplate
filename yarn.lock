@@ -1614,10 +1614,10 @@
   dependencies:
     tslib "2.4.0"
 
-"@nestjs/throttler@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@nestjs/throttler/-/throttler-2.0.1.tgz"
-  integrity sha512-ginW73rmOjBN27USuGidetEoa8VSGzxW3kEuCquEd5mETEtBfgIm4901b9tuLDnsczttE01imCHZ53J7+AuLJg==
+"@nestjs/throttler@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@nestjs/throttler/-/throttler-3.0.0.tgz"
+  integrity sha512-E5aLstJ1a3yZE6AgcN+BgHLiRd8lonR5E4E4I3wzVHRGfgglHQS1sa2zEUuD/pdzLPlbI8pvVDJom8Z2D1oDug==
   dependencies:
     md5 "^2.2.1"
 
