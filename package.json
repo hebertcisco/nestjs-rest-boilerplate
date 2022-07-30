@@ -67,7 +67,7 @@
         "moment": "2.29.4",
         "mongoose": "6.5.0",
         "morgan": "1.10.0",
-        "nest-shared": "0.4.0",
+        "nest-shared": "0.4.3",
         "pg": "8.7.3",
         "pgnode": "1.1.2",
         "qs": "6.11.0",
